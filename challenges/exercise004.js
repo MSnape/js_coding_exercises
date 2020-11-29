@@ -64,19 +64,16 @@ function getCities(users) {
   users.forEach(myFunction);
   function myFunction(item){
     cities.push(item.data.city.displayName);
-  
-  }
-
- // for (var i = 0; i < users.length; i++) {
-    
+  }   
   return cities;
 }
 
 function getSquareRoots(nums) {
   if (!nums) throw new Error("nums is required");
   var sqRoots = [];
-  for (var i = 0; i < nums.length; i++) {
-    sqRoots.push(to2DP(Math.sqrt(nums[i])));
+  nums.forEach(myFunction);
+  function myFunction(item){
+    sqRoots.push(to2DP(Math.sqrt(item)));
   }
   return sqRoots;
 }
